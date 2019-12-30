@@ -9,21 +9,73 @@ using System.Text;
 // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
 public class Service : IService
 {
-	public string GetData(int value)
+    public string GetData(int value)
+    {
+        return string.Format("You entered: {0}", value);
+    }
+
+    public CompositeType GetDataUsingDataContract(CompositeType composite)
+    {
+        if (composite == null)
+        {
+            throw new ArgumentNullException("composite");
+        }
+        if (composite.BoolValue)
+        {
+            composite.StringValue += "Suffix";
+        }
+        return composite;
+    }
+
+    public int Suma(int val1, int val2)
+    {
+        return val1 + val2;
+    }
+
+	private int division(int val1, int val2)
 	{
-		return string.Format("You entered: {0}", value);
+		return val1 / val2;
 	}
 
-	public CompositeType GetDataUsingDataContract(CompositeType composite)
+	public string dividir(int val1, int val2)
 	{
-		if (composite == null)
+		if(val2 != 0)
 		{
-			throw new ArgumentNullException("composite");
+			return this.division(val1, val2).ToString();
 		}
-		if (composite.BoolValue)
+		else
 		{
-			composite.StringValue += "Suffix";
+			return "No se puede dividir entre 0";
 		}
-		return composite;
 	}
+
+	public Double areaCirculo(int radio)
+	{
+		return Math.PI * Math.Pow(radio,2);
+	}
+
+	public int Resta (int val1, int val2)
+	{
+		return val1 - val2;
+	}
+
+	public int Multiplicacion (int val1, int val2)
+	{
+		return val1 * val2;
+	}
+    
+    public int AreaTriangulo(int baseT, int alturaT)
+    {
+        return (baseT * alturaT) / 2;
+    }
+
+    public Double AreaCuadrado(int val1)
+    {
+        return val1 * val1;
+    }
+
+    public Double AreaRectangulo(int val1, int val2)
+    {
+        return val1 * val2;
+    }
 }
