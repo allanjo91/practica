@@ -21,6 +21,12 @@ public interface IService
 	[OperationContract]
 	int Suma(int val1, int val2);
 
+	[OperationContract]
+	int Resta(int val1, int val2);
+
+	[OperationContract]
+	int Multiplicacion(int val1, int val2);
+
 }
 
 // Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.

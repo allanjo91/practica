@@ -54,4 +54,13 @@ public class Service : IService
 		return Math.PI * Math.Pow(radio,2);
 	}
 
+	public int Resta (int val1, int val2)
+	{
+		return val1 - val2;
+	}
+
+	public int Multiplicacion (int val1, int val2)
+	{
+		return val1 * val2;
+	}
 }
