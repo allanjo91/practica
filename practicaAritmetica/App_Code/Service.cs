@@ -32,11 +32,13 @@ public class Service : IService
 		return val1 + val2;
 	}
 
+	//area del cuadrado
 	public Double AreaCuadrado(int val1)
 	{
 		return val1 * val1;
 	}
 
+	//area del rectangulo
 	public Double AreaRectangulo(int val1, int val2)
 	{
 		return val1 * val2;
