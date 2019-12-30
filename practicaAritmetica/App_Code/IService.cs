@@ -28,11 +28,17 @@ public interface IService
 	int Multiplicacion(int val1, int val2);
 
 	[OperationContract]
+	int Dividir(int val1, int val2);
+
+	[OperationContract]
 	int AreaTriangulo(int baseT, int alturaT);
 
 
 	[OperationContract]
 	Double AreaCuadrado(int val1);
+
+	[OperationContract]
+	Double AreaCirculo(int val1);
 
 	[OperationContract]
 	Double AreaRectangulo(int val1, int val2);

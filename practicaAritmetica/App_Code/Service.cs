@@ -32,16 +32,16 @@ public class Service : IService
         return val1 + val2;
     }
 
-	private int division(int val1, int val2)
+	private int Division(int val1, int val2)
 	{
 		return val1 / val2;
 	}
 
-	public string dividir(int val1, int val2)
+	public string Dividir(int val1, int val2)
 	{
 		if(val2 != 0)
 		{
-			return this.division(val1, val2).ToString();
+			return this.Division(val1, val2).ToString();
 		}
 		else
 		{
@@ -49,7 +49,7 @@ public class Service : IService
 		}
 	}
 
-	public Double areaCirculo(int radio)
+	public Double AreaCirculo(int radio)
 	{
 		return Math.PI * Math.Pow(radio,2);
 	}
