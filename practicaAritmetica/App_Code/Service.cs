@@ -9,28 +9,28 @@ using System.Text;
 // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
 public class Service : IService
 {
-	public string GetData(int value)
-	{
-		return string.Format("You entered: {0}", value);
-	}
+    public string GetData(int value)
+    {
+        return string.Format("You entered: {0}", value);
+    }
 
-	public CompositeType GetDataUsingDataContract(CompositeType composite)
-	{
-		if (composite == null)
-		{
-			throw new ArgumentNullException("composite");
-		}
-		if (composite.BoolValue)
-		{
-			composite.StringValue += "Suffix";
-		}
-		return composite;
-	}
+    public CompositeType GetDataUsingDataContract(CompositeType composite)
+    {
+        if (composite == null)
+        {
+            throw new ArgumentNullException("composite");
+        }
+        if (composite.BoolValue)
+        {
+            composite.StringValue += "Suffix";
+        }
+        return composite;
+    }
 
-	public int Suma(int val1, int val2)
-	{
-		return val1 + val2;
-	}
+    public int Suma(int val1, int val2)
+    {
+        return val1 + val2;
+    }
 
 	private int division(int val1, int val2)
 	{
@@ -63,4 +63,19 @@ public class Service : IService
 	{
 		return val1 * val2;
 	}
+    
+    public int AreaTriangulo(int baseT, int alturaT)
+    {
+        return (baseT * alturaT) / 2;
+    }
+
+    public Double AreaCuadrado(int val1)
+    {
+        return val1 * val1;
+    }
+
+    public Double AreaRectangulo(int val1, int val2)
+    {
+        return val1 * val2;
+    }
 }
