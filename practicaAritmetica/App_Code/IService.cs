@@ -28,7 +28,7 @@ public interface IService
 	int Multiplicacion(int val1, int val2);
 
 	[OperationContract]
-	int Dividir(int val1, int val2);
+	String Dividir(int val1, int val2);
 
 	[OperationContract]
 	int AreaTriangulo(int baseT, int alturaT);
