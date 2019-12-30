@@ -22,7 +22,20 @@ public interface IService
 	int Suma(int val1, int val2);
 
 	[OperationContract]
+	int Resta(int val1, int val2);
+
+	[OperationContract]
+	int Multiplicacion(int val1, int val2);
+
+	[OperationContract]
 	int AreaTriangulo(int baseT, int alturaT);
+
+
+	[OperationContract]
+	Double AreaCuadrado(int val1);
+
+	[OperationContract]
+	Double AreaRectangulo(int val1, int val2);
 
 }
 
